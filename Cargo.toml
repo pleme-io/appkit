@@ -15,17 +15,20 @@ keywords = ["gpu", "application", "framework", "madori", "shikumi"]
 [features]
 default = []
 # Enable the `mcp::run_subcommand` helper for MCP-server subcommands.
-# Pulls in tokio with `rt` + `macros`.
-mcp = ["dep:tokio"]
+# Delegates to shidou's current-thread runtime helper — no tokio feature
+# flip needed on appkit itself.
+mcp = []
 
 [dependencies]
 madori = { git = "https://github.com/pleme-io/madori" }
-shikumi = { git = "https://github.com/pleme-io/shikumi" }
+# shidou owns the shared app-bootstrap primitives (tracing init, config
+# loading via shikumi, tokio runtime helpers). appkit builds on top with
+# madori-specific event-loop wiring — no point duplicating the basics.
+shidou = { git = "https://github.com/pleme-io/shidou" }
 serde = { version = "1", features = ["derive"] }
 anyhow = "1"
 thiserror = "2"
 tracing = "0.1"
-tokio = { version = "1", features = ["rt", "macros"], optional = true }
 
 [dev-dependencies]
 tempfile = "3"

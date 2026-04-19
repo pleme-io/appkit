@@ -18,7 +18,9 @@
 //! use appkit::madori::{AppEvent, KeyEvent, RenderContext};
 //! use serde::Deserialize;
 //!
-//! #[derive(Default, Deserialize, Clone)]
+//! // Clone is required because shidou's config loader returns T by value,
+//! // and Send + Sync because it may be held across async boundaries.
+//! #[derive(Default, Clone, Deserialize)]
 //! struct MyConfig { title: Option<String> }
 //!
 //! struct MyApp { title: String }
@@ -38,7 +40,7 @@
 //! }
 //!
 //! fn main() -> anyhow::Result<()> {
-//!     let cfg = appkit::load_config::<MyConfig>("myapp", None)?;
+//!     let cfg = appkit::load_config::<MyConfig>("myapp", None);
 //!     let _ = appkit::run_gpu_app::<MyApp>(cfg)?;
 //!     Ok(())
 //! }
