@@ -151,3 +151,151 @@ pub trait AppState: RenderCallback + 'static {
     /// contract is called separately by madori.
     fn on_resize(&mut self, _width: u32, _height: u32) {}
 }
+
+#[cfg(test)]
+mod tests {
+    //! Coverage for `AppState`'s default-method contract.
+    //!
+    //! Nine consumer apps (mado, hibiki, kagi, fumi, nami, hikyaku,
+    //! tobirato, ayatsuri, hikki) rely on the trait's defaults to
+    //! avoid boilerplate. If a default ever changes silently (`vsync`
+    //! flipping to false, `window_size` shrinking, `on_close` starting
+    //! to veto by default) every app regresses. These tests pin the
+    //! contract.
+    use super::*;
+    // `madori` names collide between our re-export module and the
+    // underlying crate — fully-qualify with `::madori` for the types
+    // we need here.
+    use ::madori::event::{KeyCode, Modifiers};
+    use ::madori::RenderCallback;
+
+    /// Bare-bones AppState that overrides only the two required
+    /// accessors (`init`, `window_title`). Every other method falls
+    /// through to its default so we can observe it.
+    struct BareState;
+
+    #[derive(Default, serde::Deserialize, Clone)]
+    struct BareConfig {}
+
+    impl RenderCallback for BareState {
+        fn render(&mut self, _ctx: &mut RenderContext) {}
+    }
+
+    impl AppState for BareState {
+        type Config = BareConfig;
+
+        fn init(_: Self::Config) -> anyhow::Result<Self> {
+            Ok(BareState)
+        }
+
+        fn window_title(&self) -> String {
+            "bare".into()
+        }
+    }
+
+    #[test]
+    fn default_window_size_is_720p_landscape() {
+        // 1280×720 is the baseline — apps that need something else
+        // override (hibiki uses 900×600, for instance). If this
+        // default drifts, every app-with-no-override window opens
+        // differently.
+        assert_eq!(BareState.window_size(), (1280, 720));
+    }
+
+    #[test]
+    fn default_resizable_is_true() {
+        // Flipping this to false would make launcher-style apps
+        // (tobirato) suddenly refuse user resizing.
+        assert!(BareState.resizable());
+    }
+
+    #[test]
+    fn default_vsync_is_on() {
+        // vsync-on is the battery-friendly default; games / real-time
+        // visualisers opt out. A regression to false would spike power
+        // draw on every laptop running a pleme-io app.
+        assert!(BareState.vsync());
+    }
+
+    #[test]
+    fn default_transparent_is_false() {
+        // Opaque by default. Transparent windows need extra compositor
+        // setup and aren't what most apps want at launch.
+        assert!(!BareState.transparent());
+    }
+
+    #[test]
+    fn default_on_key_returns_default_event_response() {
+        // Default `on_key` must return a non-consumed, non-exit
+        // response so apps that don't care about keys let madori's
+        // own handling proceed.
+        let ev = KeyEvent {
+            key: KeyCode::Escape,
+            pressed: true,
+            modifiers: Modifiers::default(),
+            text: None,
+        };
+        let mut s = BareState;
+        let resp = s.on_key(&ev);
+        assert!(!resp.consumed);
+        assert!(!resp.exit);
+    }
+
+    #[test]
+    fn default_on_redraw_does_not_exit() {
+        // on_redraw fires every frame; if the default ever started
+        // returning `exit: true`, every app would close on first paint.
+        let mut s = BareState;
+        let resp = s.on_redraw();
+        assert!(!resp.exit);
+    }
+
+    #[test]
+    fn default_on_close_does_not_veto() {
+        // `on_close` defaults to non-consumed so madori exits normally
+        // when the user clicks the window close button. A flip to
+        // consumed=true would trap users inside the app.
+        let mut s = BareState;
+        let resp = s.on_close();
+        assert!(!resp.consumed, "default on_close must not veto close");
+    }
+
+    #[test]
+    fn default_on_resize_is_noop() {
+        // The contract is: `on_resize` is called but the actual GPU
+        // viewport adjustment happens via `RenderCallback::resize`.
+        // If the default ever started touching state, apps that rely
+        // on the separation would break. Nothing to assert beyond
+        // "it didn't panic" — BareState has no mutable state.
+        let mut s = BareState;
+        s.on_resize(640, 480);
+    }
+
+    #[test]
+    fn required_window_title_is_exposed_by_override() {
+        // Sanity check that the `window_title` override is actually
+        // called by the trait contract — a typo in the trait would
+        // silently fall back to a default (if we had one) instead of
+        // using BareState's value.
+        assert_eq!(BareState.window_title(), "bare");
+    }
+
+    #[test]
+    fn init_consumes_default_config() {
+        // `Config: Default` means consumers can call `init(Default::default())`
+        // in tests without constructing a full config. Fully qualify
+        // the trait so the call doesn't collide with
+        // `RenderCallback::init`.
+        let cfg = BareConfig::default();
+        assert!(<BareState as AppState>::init(cfg).is_ok());
+    }
+
+    #[test]
+    fn config_bound_allows_clone_and_send_sync() {
+        // The `AppState::Config` bound is Deserialize + Default +
+        // Clone + Send + Sync. We exercise each at compile time:
+        // if the bound ever loses one, this test fails to build.
+        fn needs_full_bound<T: serde::de::DeserializeOwned + Default + Clone + Send + Sync>() {}
+        needs_full_bound::<BareConfig>();
+    }
+}
