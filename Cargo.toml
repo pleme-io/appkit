@@ -21,6 +21,7 @@ mcp = []
 
 [dependencies]
 madori = { git = "https://github.com/pleme-io/madori" }
+ishou-tokens = { git = "https://github.com/pleme-io/ishou", features = ["wgpu"] }
 # shidou owns the shared app-bootstrap primitives (tracing init, config
 # loading via shikumi, tokio runtime helpers). appkit builds on top with
 # madori-specific event-loop wiring — no point duplicating the basics.
