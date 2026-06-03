@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cargo_lock_sha256": "f789daa082cc8d1fa37c586d100afc336d0c25317a11afacf8b15e4686d4f4e6",
+  "cargo_lock_sha256": "afd517d989dc2376ae3b536efa3b1549d6db30067df5250918920d59dbe4d978",
   "target_resolves": {
     "base": {
       "aho-corasick-1.1.4": {
@@ -155,7 +155,7 @@
           },
           {
             "name": "madori",
-            "package_key": "madori-0.1.0",
+            "package_key": "madori-0.1.1",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -177,7 +177,7 @@
           },
           {
             "name": "shidou",
-            "package_key": "shidou-0.1.0",
+            "package_key": "shidou-0.1.6",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -227,6 +227,11 @@
         "build_dependencies": [],
         "features": []
       },
+      "arrayref-0.3.9": {
+        "runtime_dependencies": [],
+        "build_dependencies": [],
+        "features": []
+      },
       "arrayvec-0.7.6": {
         "runtime_dependencies": [],
         "build_dependencies": [],
@@ -253,6 +258,49 @@
           "loaded",
           "std"
         ]
+      },
+      "async-trait-0.1.89": {
+        "runtime_dependencies": [
+          {
+            "name": "proc_macro2",
+            "package_key": "proc-macro2-1.0.106",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "quote",
+            "package_key": "quote-1.0.45",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "syn",
+            "package_key": "syn-2.0.117",
+            "kind": "normal",
+            "features": [
+              "clone-impls",
+              "full",
+              "parsing",
+              "printing",
+              "proc-macro",
+              "visit-mut"
+            ],
+            "uses_default_features": false,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": []
       },
       "autocfg-1.5.0": {
         "runtime_dependencies": [],
@@ -358,6 +406,54 @@
         "build_dependencies": [],
         "features": []
       },
+      "cc-1.2.60": {
+        "runtime_dependencies": [
+          {
+            "name": "find_msvc_tools",
+            "package_key": "find-msvc-tools-0.1.9",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "jobserver",
+            "package_key": "jobserver-0.1.34",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": false,
+            "optional": true,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "libc",
+            "package_key": "libc-0.2.185",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": false,
+            "optional": true,
+            "target": "cfg(unix)",
+            "tree": "target"
+          },
+          {
+            "name": "shlex",
+            "package_key": "shlex-1.3.0",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": [
+          "parallel"
+        ]
+      },
       "cfg-if-1.0.4": {
         "runtime_dependencies": [],
         "build_dependencies": [],
@@ -367,6 +463,56 @@
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
+      },
+      "chrono-0.4.44": {
+        "runtime_dependencies": [
+          {
+            "name": "iana_time_zone",
+            "package_key": "iana-time-zone-0.1.65",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": "cfg(unix)",
+            "tree": "target"
+          },
+          {
+            "name": "num_traits",
+            "package_key": "num-traits-0.2.19",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde",
+            "package_key": "serde-1.0.228",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": false,
+            "optional": true,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": [
+          "alloc",
+          "clock",
+          "default",
+          "iana-time-zone",
+          "js-sys",
+          "now",
+          "oldtime",
+          "serde",
+          "std",
+          "wasm-bindgen",
+          "wasmbind",
+          "winapi",
+          "windows-link"
+        ]
       },
       "clap-4.6.1": {
         "runtime_dependencies": [
@@ -557,6 +703,13 @@
         "runtime_dependencies": [],
         "build_dependencies": [],
         "features": []
+      },
+      "constant_time_eq-0.4.2": {
+        "runtime_dependencies": [],
+        "build_dependencies": [],
+        "features": [
+          "std"
+        ]
       },
       "cosmic-text-0.14.2": {
         "runtime_dependencies": [
@@ -989,6 +1142,11 @@
           "yaml"
         ]
       },
+      "find-msvc-tools-0.1.9": {
+        "runtime_dependencies": [],
+        "build_dependencies": [],
+        "features": []
+      },
       "foldhash-0.1.5": {
         "runtime_dependencies": [],
         "build_dependencies": [],
@@ -1093,6 +1251,195 @@
           {
             "name": "winit",
             "package_key": "winit-0.30.13",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": []
+      },
+      "gen-macros-0.1.5": {
+        "runtime_dependencies": [
+          {
+            "name": "proc_macro2",
+            "package_key": "proc-macro2-1.0.106",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "quote",
+            "package_key": "quote-1.0.45",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "syn",
+            "package_key": "syn-2.0.117",
+            "kind": "normal",
+            "features": [
+              "full",
+              "extra-traits"
+            ],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": []
+      },
+      "gen-platform-0.1.5": {
+        "runtime_dependencies": [
+          {
+            "name": "gen_macros",
+            "package_key": "gen-macros-0.1.5",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "host"
+          },
+          {
+            "name": "gen_types",
+            "package_key": "gen-types-0.1.5",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "inventory",
+            "package_key": "inventory-0.3.24",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde",
+            "package_key": "serde-1.0.228",
+            "kind": "normal",
+            "features": [
+              "derive"
+            ],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde_json",
+            "package_key": "serde_json-1.0.149",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "thiserror",
+            "package_key": "thiserror-2.0.18",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": []
+      },
+      "gen-types-0.1.5": {
+        "runtime_dependencies": [
+          {
+            "name": "blake3",
+            "package_key": "blake3-1.8.5",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "chrono",
+            "package_key": "chrono-0.4.44",
+            "kind": "normal",
+            "features": [
+              "serde"
+            ],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "indexmap",
+            "package_key": "indexmap-2.14.0",
+            "kind": "normal",
+            "features": [
+              "serde"
+            ],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "inventory",
+            "package_key": "inventory-0.3.24",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde",
+            "package_key": "serde-1.0.228",
+            "kind": "normal",
+            "features": [
+              "derive"
+            ],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde_json",
+            "package_key": "serde_json-1.0.149",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "thiserror",
+            "package_key": "thiserror-2.0.18",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -1485,6 +1832,11 @@
         "build_dependencies": [],
         "features": []
       },
+      "inventory-0.3.24": {
+        "runtime_dependencies": [],
+        "build_dependencies": [],
+        "features": []
+      },
       "irodori-0.1.1": {
         "runtime_dependencies": [
           {
@@ -1573,6 +1925,22 @@
       },
       "itoa-1.0.18": {
         "runtime_dependencies": [],
+        "build_dependencies": [],
+        "features": []
+      },
+      "jobserver-0.1.34": {
+        "runtime_dependencies": [
+          {
+            "name": "libc",
+            "package_key": "libc-0.2.185",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": "cfg(unix)",
+            "tree": "target"
+          }
+        ],
         "build_dependencies": [],
         "features": []
       },
@@ -1700,7 +2068,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "madori-0.1.0": {
+      "madori-0.1.1": {
         "runtime_dependencies": [
           {
             "name": "egaku",
@@ -1838,6 +2206,37 @@
         ],
         "build_dependencies": [],
         "features": []
+      },
+      "mio-1.2.0": {
+        "runtime_dependencies": [
+          {
+            "name": "libc",
+            "package_key": "libc-0.2.185",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": "cfg(any(unix, target_os = \"hermit\", target_os = \"wasi\"))",
+            "tree": "target"
+          },
+          {
+            "name": "log",
+            "package_key": "log-0.4.29",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": true,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": [
+          "default",
+          "log",
+          "os-ext",
+          "os-poll"
+        ]
       },
       "naga-25.0.1": {
         "runtime_dependencies": [
@@ -2851,7 +3250,7 @@
         "build_dependencies": [],
         "features": []
       },
-      "shidou-0.1.0": {
+      "shidou-0.1.6": {
         "runtime_dependencies": [
           {
             "name": "anyhow",
@@ -2946,6 +3345,16 @@
             "tree": "target"
           },
           {
+            "name": "async_trait",
+            "package_key": "async-trait-0.1.89",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "host"
+          },
+          {
             "name": "figment",
             "package_key": "figment-0.10.19",
             "kind": "normal",
@@ -2960,13 +3369,43 @@
             "tree": "target"
           },
           {
-            "name": "notify",
-            "package_key": "notify-8.2.0",
+            "name": "gen_platform",
+            "package_key": "gen-platform-0.1.5",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
             "optional": false,
             "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "gen_types",
+            "package_key": "gen-types-0.1.5",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "notify",
+            "package_key": "notify-8.2.0",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": false,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "notify",
+            "package_key": "notify-8.2.0",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": false,
+            "optional": false,
+            "target": "cfg(target_os = \"macos\")",
             "tree": "target"
           },
           {
@@ -2984,6 +3423,16 @@
           {
             "name": "serde_json",
             "package_key": "serde_json-1.0.149",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde_yaml",
+            "package_key": "serde_yaml-0.9.34+deprecated",
             "kind": "normal",
             "features": [],
             "uses_default_features": true,
@@ -3015,6 +3464,14 @@
         "build_dependencies": [],
         "features": [
           "default"
+        ]
+      },
+      "shlex-1.3.0": {
+        "runtime_dependencies": [],
+        "build_dependencies": [],
+        "features": [
+          "default",
+          "std"
         ]
       },
       "skrifa-0.40.0": {
@@ -3768,6 +4225,32 @@
           "std"
         ]
       },
+      "tracing-serde-0.2.0": {
+        "runtime_dependencies": [
+          {
+            "name": "serde",
+            "package_key": "serde-1.0.228",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "tracing_core",
+            "package_key": "tracing-core-0.1.36",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
+          }
+        ],
+        "build_dependencies": [],
+        "features": []
+      },
       "tracing-subscriber-0.3.23": {
         "runtime_dependencies": [
           {
@@ -3807,6 +4290,26 @@
             "features": [],
             "uses_default_features": true,
             "optional": false,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde",
+            "package_key": "serde-1.0.228",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": true,
+            "target": null,
+            "tree": "target"
+          },
+          {
+            "name": "serde_json",
+            "package_key": "serde_json-1.0.149",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": true,
             "target": null,
             "tree": "target"
           },
@@ -3869,6 +4372,16 @@
             "optional": false,
             "target": null,
             "tree": "target"
+          },
+          {
+            "name": "tracing_serde",
+            "package_key": "tracing-serde-0.2.0",
+            "kind": "normal",
+            "features": [],
+            "uses_default_features": true,
+            "optional": false,
+            "target": null,
+            "tree": "target"
           }
         ],
         "build_dependencies": [],
@@ -3878,16 +4391,20 @@
           "default",
           "env-filter",
           "fmt",
+          "json",
           "matchers",
           "nu-ansi-term",
           "once_cell",
           "registry",
+          "serde",
+          "serde_json",
           "sharded-slab",
           "smallvec",
           "std",
           "thread_local",
           "tracing",
-          "tracing-log"
+          "tracing-log",
+          "tracing-serde"
         ]
       },
       "ttf-parser-0.20.0": {
@@ -4419,6 +4936,66 @@
               "default"
             ]
           },
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.6",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.60",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
+            ]
+          },
           "block-0.1.6": {
             "runtime_dependencies": [],
             "build_dependencies": [],
@@ -4477,6 +5054,7 @@
             "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
+              "default",
               "link"
             ]
           },
@@ -4738,6 +5316,76 @@
             "build_dependencies": [],
             "features": []
           },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [
+              {
+                "name": "core_foundation_sys",
+                "package_key": "core-foundation-sys-0.8.7",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_vendor = \"apple\")",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          },
+          "kqueue-1.1.1": {
+            "runtime_dependencies": [
+              {
+                "name": "kqueue_sys",
+                "package_key": "kqueue-sys-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "libc",
+                "package_key": "libc-0.2.185",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
+          "kqueue-sys-1.0.4": {
+            "runtime_dependencies": [
+              {
+                "name": "bitflags",
+                "package_key": "bitflags-1.3.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "libc",
+                "package_key": "libc-0.2.185",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
           "malloc_buf-0.0.6": {
             "runtime_dependencies": [
               {
@@ -4856,6 +5504,26 @@
                 "tree": "target"
               },
               {
+                "name": "kqueue",
+                "package_key": "kqueue-1.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\", target_os = \"dragonflybsd\", target_os = \"ios\"))",
+                "tree": "target"
+              },
+              {
+                "name": "kqueue",
+                "package_key": "kqueue-1.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
+                "tree": "target"
+              },
+              {
                 "name": "libc",
                 "package_key": "libc-0.2.185",
                 "kind": "normal",
@@ -4873,6 +5541,42 @@
                 "uses_default_features": true,
                 "optional": false,
                 "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\", target_os = \"dragonflybsd\", target_os = \"ios\"))",
+                "tree": "target"
+              },
+              {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_os = \"linux\", target_os = \"android\"))",
+                "tree": "target"
+              },
+              {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
                 "tree": "target"
               },
               {
@@ -4900,7 +5604,10 @@
             "features": [
               "default",
               "fsevent-sys",
-              "macos_fsevent"
+              "kqueue",
+              "macos_fsevent",
+              "macos_kqueue",
+              "mio"
             ]
           },
           "objc-0.2.7": {
@@ -6226,6 +6933,76 @@
               "default"
             ]
           },
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.6",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.3.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.60",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
+            ]
+          },
           "block-0.1.6": {
             "runtime_dependencies": [],
             "build_dependencies": [],
@@ -6284,6 +7061,7 @@
             "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
+              "default",
               "link"
             ]
           },
@@ -6384,6 +7162,11 @@
               "default",
               "link"
             ]
+          },
+          "cpufeatures-0.3.0": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": []
           },
           "dispatch-0.2.0": {
             "runtime_dependencies": [],
@@ -6545,6 +7328,76 @@
             "build_dependencies": [],
             "features": []
           },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [
+              {
+                "name": "core_foundation_sys",
+                "package_key": "core-foundation-sys-0.8.7",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_vendor = \"apple\")",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          },
+          "kqueue-1.1.1": {
+            "runtime_dependencies": [
+              {
+                "name": "kqueue_sys",
+                "package_key": "kqueue-sys-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "libc",
+                "package_key": "libc-0.2.185",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
+          "kqueue-sys-1.0.4": {
+            "runtime_dependencies": [
+              {
+                "name": "bitflags",
+                "package_key": "bitflags-1.3.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "libc",
+                "package_key": "libc-0.2.185",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [],
+            "features": []
+          },
           "malloc_buf-0.0.6": {
             "runtime_dependencies": [
               {
@@ -6663,6 +7516,26 @@
                 "tree": "target"
               },
               {
+                "name": "kqueue",
+                "package_key": "kqueue-1.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\", target_os = \"dragonflybsd\", target_os = \"ios\"))",
+                "tree": "target"
+              },
+              {
+                "name": "kqueue",
+                "package_key": "kqueue-1.1.1",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
+                "tree": "target"
+              },
+              {
                 "name": "libc",
                 "package_key": "libc-0.2.185",
                 "kind": "normal",
@@ -6680,6 +7553,42 @@
                 "uses_default_features": true,
                 "optional": false,
                 "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\", target_os = \"dragonflybsd\", target_os = \"ios\"))",
+                "tree": "target"
+              },
+              {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_os = \"linux\", target_os = \"android\"))",
+                "tree": "target"
+              },
+              {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
                 "tree": "target"
               },
               {
@@ -6707,7 +7616,10 @@
             "features": [
               "default",
               "fsevent-sys",
-              "macos_fsevent"
+              "kqueue",
+              "macos_fsevent",
+              "macos_kqueue",
+              "mio"
             ]
           },
           "objc-0.2.7": {
@@ -8132,17 +9044,82 @@
               "std"
             ]
           },
-          "arrayref-0.3.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
           "as-raw-xcb-connection-1.0.1": {
             "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
               "alloc",
               "default"
+            ]
+          },
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.6",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.3.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.60",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
             ]
           },
           "calloop-0.13.0": {
@@ -8264,53 +9241,10 @@
             "build_dependencies": [],
             "features": []
           },
-          "cc-1.2.60": {
-            "runtime_dependencies": [
-              {
-                "name": "find_msvc_tools",
-                "package_key": "find-msvc-tools-0.1.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "jobserver",
-                "package_key": "jobserver-0.1.34",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": "cfg(unix)",
-                "tree": "target"
-              },
-              {
-                "name": "shlex",
-                "package_key": "shlex-1.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
+          "cpufeatures-0.3.0": {
+            "runtime_dependencies": [],
             "build_dependencies": [],
-            "features": [
-              "parallel"
-            ]
+            "features": []
           },
           "dlib-0.5.3": {
             "runtime_dependencies": [
@@ -8335,11 +9269,6 @@
               "default",
               "std"
             ]
-          },
-          "find-msvc-tools-0.1.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
           },
           "fontconfig-parser-0.5.8": {
             "runtime_dependencies": [
@@ -8548,6 +9477,13 @@
               "std"
             ]
           },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          },
           "inotify-0.11.1": {
             "runtime_dependencies": [
               {
@@ -8600,22 +9536,6 @@
             "build_dependencies": [],
             "features": []
           },
-          "jobserver-0.1.34": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(unix)",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
           "linux-raw-sys-0.4.15": {
             "runtime_dependencies": [],
             "build_dependencies": [],
@@ -8645,37 +9565,6 @@
               "prctl",
               "system",
               "xdp"
-            ]
-          },
-          "mio-1.2.0": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(unix, target_os = \"hermit\", target_os = \"wasi\"))",
-                "tree": "target"
-              },
-              {
-                "name": "log",
-                "package_key": "log-0.4.29",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "log",
-              "os-ext",
-              "os-poll"
             ]
           },
           "notify-8.2.0": {
@@ -8735,6 +9624,18 @@
                 "tree": "target"
               },
               {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
+                "tree": "target"
+              },
+              {
                 "name": "notify_types",
                 "package_key": "notify-types-2.1.0",
                 "kind": "normal",
@@ -8759,7 +9660,10 @@
             "features": [
               "default",
               "fsevent-sys",
-              "macos_fsevent"
+              "kqueue",
+              "macos_fsevent",
+              "macos_kqueue",
+              "mio"
             ]
           },
           "owned_ttf_parser-0.25.1": {
@@ -9114,14 +10018,6 @@
             "features": [
               "ab_glyph",
               "memmap2"
-            ]
-          },
-          "shlex-1.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "std"
             ]
           },
           "slab-0.4.12": {
@@ -11070,17 +11966,82 @@
               "std"
             ]
           },
-          "arrayref-0.3.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
           "as-raw-xcb-connection-1.0.1": {
             "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
               "alloc",
               "default"
+            ]
+          },
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.6",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cpufeatures",
+                "package_key": "cpufeatures-0.3.0",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(any(target_arch = \"x86\", target_arch = \"x86_64\"))",
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.60",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
             ]
           },
           "calloop-0.13.0": {
@@ -11202,53 +12163,10 @@
             "build_dependencies": [],
             "features": []
           },
-          "cc-1.2.60": {
-            "runtime_dependencies": [
-              {
-                "name": "find_msvc_tools",
-                "package_key": "find-msvc-tools-0.1.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "jobserver",
-                "package_key": "jobserver-0.1.34",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": "cfg(unix)",
-                "tree": "target"
-              },
-              {
-                "name": "shlex",
-                "package_key": "shlex-1.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
+          "cpufeatures-0.3.0": {
+            "runtime_dependencies": [],
             "build_dependencies": [],
-            "features": [
-              "parallel"
-            ]
+            "features": []
           },
           "dlib-0.5.3": {
             "runtime_dependencies": [
@@ -11273,11 +12191,6 @@
               "default",
               "std"
             ]
-          },
-          "find-msvc-tools-0.1.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
           },
           "fontconfig-parser-0.5.8": {
             "runtime_dependencies": [
@@ -11486,6 +12399,13 @@
               "std"
             ]
           },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          },
           "inotify-0.11.1": {
             "runtime_dependencies": [
               {
@@ -11538,22 +12458,6 @@
             "build_dependencies": [],
             "features": []
           },
-          "jobserver-0.1.34": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(unix)",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
           "linux-raw-sys-0.4.15": {
             "runtime_dependencies": [],
             "build_dependencies": [],
@@ -11583,37 +12487,6 @@
               "prctl",
               "system",
               "xdp"
-            ]
-          },
-          "mio-1.2.0": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(unix, target_os = \"hermit\", target_os = \"wasi\"))",
-                "tree": "target"
-              },
-              {
-                "name": "log",
-                "package_key": "log-0.4.29",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "log",
-              "os-ext",
-              "os-poll"
             ]
           },
           "notify-8.2.0": {
@@ -11673,6 +12546,18 @@
                 "tree": "target"
               },
               {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
+                "tree": "target"
+              },
+              {
                 "name": "notify_types",
                 "package_key": "notify-types-2.1.0",
                 "kind": "normal",
@@ -11697,7 +12582,10 @@
             "features": [
               "default",
               "fsevent-sys",
-              "macos_fsevent"
+              "kqueue",
+              "macos_fsevent",
+              "macos_kqueue",
+              "mio"
             ]
           },
           "owned_ttf_parser-0.25.1": {
@@ -12052,14 +12940,6 @@
             "features": [
               "ab_glyph",
               "memmap2"
-            ]
-          },
-          "shlex-1.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "std"
             ]
           },
           "slab-0.4.12": {
@@ -14008,17 +14888,72 @@
               "std"
             ]
           },
-          "arrayref-0.3.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
           "as-raw-xcb-connection-1.0.1": {
             "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
               "alloc",
               "default"
+            ]
+          },
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.6",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.60",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
             ]
           },
           "calloop-0.13.0": {
@@ -14140,54 +15075,6 @@
             "build_dependencies": [],
             "features": []
           },
-          "cc-1.2.60": {
-            "runtime_dependencies": [
-              {
-                "name": "find_msvc_tools",
-                "package_key": "find-msvc-tools-0.1.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "jobserver",
-                "package_key": "jobserver-0.1.34",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": "cfg(unix)",
-                "tree": "target"
-              },
-              {
-                "name": "shlex",
-                "package_key": "shlex-1.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "parallel"
-            ]
-          },
           "dlib-0.5.3": {
             "runtime_dependencies": [
               {
@@ -14211,11 +15098,6 @@
               "default",
               "std"
             ]
-          },
-          "find-msvc-tools-0.1.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
           },
           "fontconfig-parser-0.5.8": {
             "runtime_dependencies": [
@@ -14424,6 +15306,13 @@
               "std"
             ]
           },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          },
           "inotify-0.11.1": {
             "runtime_dependencies": [
               {
@@ -14476,22 +15365,6 @@
             "build_dependencies": [],
             "features": []
           },
-          "jobserver-0.1.34": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(unix)",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
           "linux-raw-sys-0.4.15": {
             "runtime_dependencies": [],
             "build_dependencies": [],
@@ -14521,37 +15394,6 @@
               "prctl",
               "system",
               "xdp"
-            ]
-          },
-          "mio-1.2.0": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(unix, target_os = \"hermit\", target_os = \"wasi\"))",
-                "tree": "target"
-              },
-              {
-                "name": "log",
-                "package_key": "log-0.4.29",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "log",
-              "os-ext",
-              "os-poll"
             ]
           },
           "notify-8.2.0": {
@@ -14611,6 +15453,18 @@
                 "tree": "target"
               },
               {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
+                "tree": "target"
+              },
+              {
                 "name": "notify_types",
                 "package_key": "notify-types-2.1.0",
                 "kind": "normal",
@@ -14635,7 +15489,10 @@
             "features": [
               "default",
               "fsevent-sys",
-              "macos_fsevent"
+              "kqueue",
+              "macos_fsevent",
+              "macos_kqueue",
+              "mio"
             ]
           },
           "owned_ttf_parser-0.25.1": {
@@ -14990,14 +15847,6 @@
             "features": [
               "ab_glyph",
               "memmap2"
-            ]
-          },
-          "shlex-1.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "std"
             ]
           },
           "slab-0.4.12": {
@@ -16946,17 +17795,72 @@
               "std"
             ]
           },
-          "arrayref-0.3.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
-          },
           "as-raw-xcb-connection-1.0.1": {
             "runtime_dependencies": [],
             "build_dependencies": [],
             "features": [
               "alloc",
               "default"
+            ]
+          },
+          "blake3-1.8.5": {
+            "runtime_dependencies": [
+              {
+                "name": "arrayref",
+                "package_key": "arrayref-0.3.9",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "arrayvec",
+                "package_key": "arrayvec-0.7.6",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "cfg_if",
+                "package_key": "cfg-if-1.0.4",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              },
+              {
+                "name": "constant_time_eq",
+                "package_key": "constant_time_eq-0.4.2",
+                "kind": "normal",
+                "features": [],
+                "uses_default_features": false,
+                "optional": false,
+                "target": null,
+                "tree": "target"
+              }
+            ],
+            "build_dependencies": [
+              {
+                "name": "cc",
+                "package_key": "cc-1.2.60",
+                "kind": "build",
+                "features": [],
+                "uses_default_features": true,
+                "optional": false,
+                "target": null,
+                "tree": "host"
+              }
+            ],
+            "features": [
+              "default",
+              "std"
             ]
           },
           "calloop-0.13.0": {
@@ -17078,54 +17982,6 @@
             "build_dependencies": [],
             "features": []
           },
-          "cc-1.2.60": {
-            "runtime_dependencies": [
-              {
-                "name": "find_msvc_tools",
-                "package_key": "find-msvc-tools-0.1.9",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "jobserver",
-                "package_key": "jobserver-0.1.34",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              },
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": false,
-                "optional": true,
-                "target": "cfg(unix)",
-                "tree": "target"
-              },
-              {
-                "name": "shlex",
-                "package_key": "shlex-1.3.0",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "parallel"
-            ]
-          },
           "dlib-0.5.3": {
             "runtime_dependencies": [
               {
@@ -17149,11 +18005,6 @@
               "default",
               "std"
             ]
-          },
-          "find-msvc-tools-0.1.9": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": []
           },
           "fontconfig-parser-0.5.8": {
             "runtime_dependencies": [
@@ -17362,6 +18213,13 @@
               "std"
             ]
           },
+          "iana-time-zone-0.1.65": {
+            "runtime_dependencies": [],
+            "build_dependencies": [],
+            "features": [
+              "fallback"
+            ]
+          },
           "inotify-0.11.1": {
             "runtime_dependencies": [
               {
@@ -17414,22 +18272,6 @@
             "build_dependencies": [],
             "features": []
           },
-          "jobserver-0.1.34": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(unix)",
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": []
-          },
           "linux-raw-sys-0.4.15": {
             "runtime_dependencies": [],
             "build_dependencies": [],
@@ -17459,37 +18301,6 @@
               "prctl",
               "system",
               "xdp"
-            ]
-          },
-          "mio-1.2.0": {
-            "runtime_dependencies": [
-              {
-                "name": "libc",
-                "package_key": "libc-0.2.185",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": false,
-                "target": "cfg(any(unix, target_os = \"hermit\", target_os = \"wasi\"))",
-                "tree": "target"
-              },
-              {
-                "name": "log",
-                "package_key": "log-0.4.29",
-                "kind": "normal",
-                "features": [],
-                "uses_default_features": true,
-                "optional": true,
-                "target": null,
-                "tree": "target"
-              }
-            ],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "log",
-              "os-ext",
-              "os-poll"
             ]
           },
           "notify-8.2.0": {
@@ -17549,6 +18360,18 @@
                 "tree": "target"
               },
               {
+                "name": "mio",
+                "package_key": "mio-1.2.0",
+                "kind": "normal",
+                "features": [
+                  "os-ext"
+                ],
+                "uses_default_features": true,
+                "optional": false,
+                "target": "cfg(target_os = \"macos\")",
+                "tree": "target"
+              },
+              {
                 "name": "notify_types",
                 "package_key": "notify-types-2.1.0",
                 "kind": "normal",
@@ -17573,7 +18396,10 @@
             "features": [
               "default",
               "fsevent-sys",
-              "macos_fsevent"
+              "kqueue",
+              "macos_fsevent",
+              "macos_kqueue",
+              "mio"
             ]
           },
           "owned_ttf_parser-0.25.1": {
@@ -17928,14 +18754,6 @@
             "features": [
               "ab_glyph",
               "memmap2"
-            ]
-          },
-          "shlex-1.3.0": {
-            "runtime_dependencies": [],
-            "build_dependencies": [],
-            "features": [
-              "default",
-              "std"
             ]
           },
           "slab-0.4.12": {
@@ -19808,12 +20626,19 @@
     "arc-swap-1.9.1": {
       "edition": "2018"
     },
+    "arrayref-0.3.9": {
+      "edition": "2015"
+    },
     "arrayvec-0.7.6": {
       "edition": "2018"
     },
     "ash-0.38.0+1.3.281": {
       "edition": "2021",
       "build_script": "build.rs"
+    },
+    "async-trait-0.1.89": {
+      "edition": "2021",
+      "proc_macro": true
     },
     "autocfg-1.5.0": {
       "edition": "2015"
@@ -19830,6 +20655,10 @@
     "bitflags-2.11.1": {
       "edition": "2021"
     },
+    "blake3-1.8.5": {
+      "edition": "2024",
+      "build_script": "build.rs"
+    },
     "block-0.1.6": {
       "edition": "2015"
     },
@@ -19843,11 +20672,17 @@
       "edition": "2018",
       "proc_macro": true
     },
+    "cc-1.2.60": {
+      "edition": "2018"
+    },
     "cfg-if-1.0.4": {
       "edition": "2018"
     },
     "cfg_aliases-0.2.1": {
       "edition": "2018"
+    },
+    "chrono-0.4.44": {
+      "edition": "2021"
     },
     "clap-4.6.1": {
       "edition": "2024",
@@ -19873,6 +20708,9 @@
     },
     "colorchoice-1.0.5": {
       "edition": "2021"
+    },
+    "constant_time_eq-0.4.2": {
+      "edition": "2024"
     },
     "core-foundation-0.9.4": {
       "edition": "2018"
@@ -19928,6 +20766,9 @@
       "edition": "2018",
       "build_script": "build.rs"
     },
+    "find-msvc-tools-0.1.9": {
+      "edition": "2018"
+    },
     "foldhash-0.1.5": {
       "edition": "2021"
     },
@@ -19951,6 +20792,16 @@
       "edition": "2018"
     },
     "garasu-0.1.0": {
+      "edition": "2024"
+    },
+    "gen-macros-0.1.5": {
+      "edition": "2024",
+      "proc_macro": true
+    },
+    "gen-platform-0.1.5": {
+      "edition": "2024"
+    },
+    "gen-types-0.1.5": {
       "edition": "2024"
     },
     "getrandom-0.4.2": {
@@ -19990,11 +20841,17 @@
     "hexf-parse-0.2.1": {
       "edition": "2018"
     },
+    "iana-time-zone-0.1.65": {
+      "edition": "2021"
+    },
     "indexmap-2.14.0": {
       "edition": "2024"
     },
     "inlinable_string-0.1.15": {
       "edition": "2018"
+    },
+    "inventory-0.3.24": {
+      "edition": "2021"
     },
     "irodori-0.1.1": {
       "edition": "2024"
@@ -20008,9 +20865,18 @@
     "itoa-1.0.18": {
       "edition": "2021"
     },
+    "jobserver-0.1.34": {
+      "edition": "2021"
+    },
     "khronos-egl-6.0.0": {
       "edition": "2021",
       "build_script": "build.rs"
+    },
+    "kqueue-1.1.1": {
+      "edition": "2021"
+    },
+    "kqueue-sys-1.0.4": {
+      "edition": "2018"
     },
     "lazy_static-1.5.0": {
       "edition": "2015"
@@ -20038,7 +20904,7 @@
     "lru-0.12.5": {
       "edition": "2015"
     },
-    "madori-0.1.0": {
+    "madori-0.1.1": {
       "edition": "2024"
     },
     "malloc_buf-0.0.6": {
@@ -20054,6 +20920,9 @@
       "edition": "2021"
     },
     "metal-0.31.0": {
+      "edition": "2021"
+    },
+    "mio-1.2.0": {
       "edition": "2021"
     },
     "naga-25.0.1": {
@@ -20227,11 +21096,14 @@
     "sharded-slab-0.1.7": {
       "edition": "2018"
     },
-    "shidou-0.1.0": {
+    "shidou-0.1.6": {
       "edition": "2024"
     },
     "shikumi-0.1.0": {
       "edition": "2024"
+    },
+    "shlex-1.3.0": {
+      "edition": "2015"
     },
     "skrifa-0.40.0": {
       "edition": "2021"
@@ -20327,6 +21199,9 @@
       "edition": "2018"
     },
     "tracing-log-0.2.0": {
+      "edition": "2018"
+    },
+    "tracing-serde-0.2.0": {
       "edition": "2018"
     },
     "tracing-subscriber-0.3.23": {
@@ -20461,6 +21336,9 @@
       "edition": "2021",
       "build_script": "build.rs"
     },
+    "cpufeatures-0.3.0": {
+      "edition": "2024"
+    },
     "ab_glyph-0.2.32": {
       "edition": "2021"
     },
@@ -20471,9 +21349,6 @@
       "edition": "2018",
       "build_script": "build.rs"
     },
-    "arrayref-0.3.9": {
-      "edition": "2015"
-    },
     "as-raw-xcb-connection-1.0.1": {
       "edition": "2021"
     },
@@ -20483,17 +21358,11 @@
     "calloop-wayland-source-0.3.0": {
       "edition": "2021"
     },
-    "cc-1.2.60": {
-      "edition": "2018"
-    },
     "dlib-0.5.3": {
       "edition": "2021"
     },
     "downcast-rs-1.2.1": {
       "edition": "2015"
-    },
-    "find-msvc-tools-0.1.9": {
-      "edition": "2018"
     },
     "fontconfig-parser-0.5.8": {
       "edition": "2018"
@@ -20511,16 +21380,10 @@
     "inotify-sys-0.1.5": {
       "edition": "2015"
     },
-    "jobserver-0.1.34": {
-      "edition": "2021"
-    },
     "linux-raw-sys-0.4.15": {
       "edition": "2021"
     },
     "linux-raw-sys-0.12.1": {
-      "edition": "2021"
-    },
-    "mio-1.2.0": {
       "edition": "2021"
     },
     "owned_ttf_parser-0.25.1": {
@@ -20547,9 +21410,6 @@
     },
     "sctk-adwaita-0.10.1": {
       "edition": "2021"
-    },
-    "shlex-1.3.0": {
-      "edition": "2015"
     },
     "slab-0.4.12": {
       "edition": "2018"
@@ -20633,12 +21493,13 @@
     }
   },
   "git_nar_sha256": {
-    "egaku-0.1.0": "sha256-ldTZwMZYLHLmz1hLBFjrroWBkV+d1C64N3jG+birLgQ=",
-    "garasu-0.1.0": "sha256-A24H7pD7+AcRlUhD8AKRlFpCMObY9Qs1IM9QZmX2Ne0=",
+    "gen-macros-0.1.5": "sha256-hWGPHCRvRnDbzfmEzejqCGtbWi39+IAbD40o7Bp533Q=",
+    "gen-platform-0.1.5": "sha256-hWGPHCRvRnDbzfmEzejqCGtbWi39+IAbD40o7Bp533Q=",
+    "gen-types-0.1.5": "sha256-hWGPHCRvRnDbzfmEzejqCGtbWi39+IAbD40o7Bp533Q=",
     "ishou-tokens-0.1.1": "sha256-APtl3WHHYpVb1A75vmszrcJpWnEEwUyChPUzgeQoJeg=",
-    "madori-0.1.0": "sha256-pxSEI4Obf5ICUO85tZhEsyStYiOEP8k+u+MvMPg3qgs=",
-    "shidou-0.1.0": "sha256-mPJVmaNl16iflyoGArJBmw4AtbIkpSsTlgPlL1oOWk0=",
-    "shikumi-0.1.0": "sha256-ZDc7nr6NYshlsby++tI9BVnNz7V3GtAAWWVWyxx/GmM="
+    "madori-0.1.1": "sha256-p5yQKNqMIZbkoQC9Rz3erOSzOjp6kc6YJ9cWbcn7mjA=",
+    "shidou-0.1.6": "sha256-+mtRgcapfNOf1ZUwBTSybksjtmINsCpJFZu0stnKN3g=",
+    "shikumi-0.1.0": "sha256-1hpQx6tu1Nc78XzxDTwVArW77AgpxIEp+6WzLslBbso="
   },
   "flake_metadata": {}
 }
