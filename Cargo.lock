@@ -766,8 +766,8 @@ dependencies = [
 
 [[package]]
 name = "gen-macros"
-version = "0.1.5"
-source = "git+https://github.com/pleme-io/gen#b31e28e9d7ff7444d6a14520793c9e1d46dbf7dd"
+version = "0.1.8"
+source = "git+https://github.com/pleme-io/gen#e4759b7b81b3b4f9505f3723d33bcd7e522dd6c3"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -776,8 +776,8 @@ dependencies = [
 
 [[package]]
 name = "gen-platform"
-version = "0.1.5"
-source = "git+https://github.com/pleme-io/gen#b31e28e9d7ff7444d6a14520793c9e1d46dbf7dd"
+version = "0.1.8"
+source = "git+https://github.com/pleme-io/gen#e4759b7b81b3b4f9505f3723d33bcd7e522dd6c3"
 dependencies = [
  "gen-macros",
  "gen-types",
@@ -789,8 +789,8 @@ dependencies = [
 
 [[package]]
 name = "gen-types"
-version = "0.1.5"
-source = "git+https://github.com/pleme-io/gen#b31e28e9d7ff7444d6a14520793c9e1d46dbf7dd"
+version = "0.1.8"
+source = "git+https://github.com/pleme-io/gen#e4759b7b81b3b4f9505f3723d33bcd7e522dd6c3"
 dependencies = [
  "blake3",
  "chrono",
@@ -1291,8 +1291,8 @@ checksum = "234cf4f4a04dc1f57e24b96cc0cd600cf2af460d4161ac5ecdd0af8e1f3b2a38"
 
 [[package]]
 name = "madori"
-version = "0.1.1"
-source = "git+https://github.com/pleme-io/madori#c8701616088775c2b6bc3833fb4826ecb30f24f9"
+version = "0.1.2"
+source = "git+https://github.com/pleme-io/madori#dd7037ee3a600c3b670d56c15fbeb4319ee3b9a3"
 dependencies = [
  "egaku",
  "garasu",
